@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+# Github Topic Explorer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+App to check Github topics and his related topics, with React as default topic
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,32 +40,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future improvements
+### Code Structuring
+* **Layout components**: In the future could be a good pracice to create a Layout folder isolated from pages, to choose if we could use a diferent layout in different pages 
+* **Custom styles**: Create a Styles folder to hold styles
+* **Config file**: Add a config file for constants
+### Refactoring
+* **Redirects in the backend**: Remove redirect to /react from the frontend and add it to the Express server, all the redirects should be made by a backend server
+* **Custom SCSS and components**: Remove mateial UI library and ad custom Styles with Sass
+* **Look and feel**: Improve Look and feel by a UX expert
+* **Automation tests**: While snapshops are useful they only provide a way to be aware of possible unwanted layout changes, the real test for frontend should be to add automation end to end tests by Cypress or something similar
+* **Dont use bare keys!**: Find a way to securely handle Github API key, is a bad practice just put it on the env vars (AWS secret, Cyphers)
+### Aditional features
+* **Breadcrumbs**: Add a breadcrumb to follow a path for the clicked topics
+* **Multiple topics**: Multiple topic search
+* **Link to repos**: To add extra functionality a Link to the main repos for that topics should be useful

@@ -8,12 +8,8 @@ import { setContext } from '@apollo/client/link/context';
 export class GitHubService {
     static connection;
 
-    static getConnection() {
-
-    }
-
     static httpLink = createHttpLink({
-        uri: 'https://api.github.com/graphql',
+        uri: process.env.REACT_APP_GRAPHQL_URL,
     });
     
     static authLink = setContext((_, { headers }) => {
@@ -29,6 +25,7 @@ export class GitHubService {
     });
     
     static getClient(){
+        // if the connection already exists return it, if not create a new client
         if(!Boolean(this.connection)) {
             this.connection = new ApolloClient({
                 link: this.authLink.concat(this.httpLink),

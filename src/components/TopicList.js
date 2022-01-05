@@ -22,16 +22,16 @@ export default function TopicList({ info }) {
         </ListSubheader>
       }
     >
-        {(info && info.topic && info.topic.relatedTopics.length > 0) ? info.topic.relatedTopics.map(({ name, stargazerCount }) => (
-            <ListItem key={name}>
-                <ListItemIcon>
-                    <TopicIcon />
-                </ListItemIcon>
-                <a href={`/${name}`}>
-                    <ListItemText primary={`Topic: ${name}`} secondary={`Stargazers: ${stargazerCount}`} />
-                </a>
-            </ListItem>
-        )) : <ContentHolder>No results</ContentHolder>}
+      {(info && info.topic && info.topic.relatedTopics.length > 0) ? info.topic.relatedTopics.map(({ name, stargazerCount }) => (
+          <ListItem key={name}>
+              <ListItemIcon>
+                  <TopicIcon />
+              </ListItemIcon>
+              <a href={`/${name}`}>
+                  <ListItemText primary={`Topic: ${name}`} secondary={`Stargazers: ${stargazerCount}`} />
+              </a>
+          </ListItem>
+      )) : <ContentHolder>No results</ContentHolder>}
     </List>
   );
 }
