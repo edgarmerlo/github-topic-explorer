@@ -3,10 +3,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 App to check Github topics and his related topics, with React as default topic
-## Available Scripts
+
+## Dependencies
+
+Node >= 14
+npm 5.2+ 
+
+## Run the project
+
+First add your Github personal token to the .env file to authenticate in the Git hub API (https://docs.github.com/en/graphql/guides/forming-calls-with-graphql)
+**be careful and don't commit your personal token!**
+
+To install dependencies run 
+### `npm install`
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
