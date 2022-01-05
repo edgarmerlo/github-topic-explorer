@@ -23,11 +23,11 @@ export default function TopicList({ info }) {
       }
     >
         {(info && info.topic && info.topic.relatedTopics.length > 0) ? info.topic.relatedTopics.map(({ name, stargazerCount }) => (
-            <ListItem>
+            <ListItem key={name}>
                 <ListItemIcon>
                     <TopicIcon />
                 </ListItemIcon>
-                <a href={`/${name}`} key={name}>
+                <a href={`/${name}`}>
                     <ListItemText primary={`Topic: ${name}`} secondary={`Stargazers: ${stargazerCount}`} />
                 </a>
             </ListItem>

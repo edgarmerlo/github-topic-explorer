@@ -1,11 +1,12 @@
 import {
     ApolloClient,
     InMemoryCache,
+    useQuery,
     createHttpLink
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
-export class GitHubService {
+export class GraphQlService {
     static connection;
 
     static getConnection() {
@@ -40,6 +41,7 @@ export class GitHubService {
 
     static makeQuery(query, variables) {
         const client = this.getClient();
+        console.log(client, query)
         return client.query({query, variables});
     }
 }

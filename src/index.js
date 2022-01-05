@@ -4,18 +4,14 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import './index.css';
 import App from './pages/results';
 import reportWebVitals from './reportWebVitals';
-import { client } from './services/github';
-import { ApolloProvider } from '@apollo/client';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ApolloProvider client={client}>
-        <Routes>
-          <Route exact path="/" element={<Navigate to="/react" />} />
-          <Route path=":topicName" element={<App />} />hola
-        </Routes>
-      </ApolloProvider>
+      <Routes>
+        <Route exact path="/" element={<Navigate to="/react" />} />
+        <Route path=":topicName" element={<App />} />hola
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
